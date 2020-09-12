@@ -66,6 +66,7 @@ function getNewToken(oAuth2Client, callback) {
   });
 }
 
+const ranges = require('./ranges.json')
 /**
  * Prints the names and majors of students in a sample spreadsheet:
  * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
@@ -73,20 +74,21 @@ function getNewToken(oAuth2Client, callback) {
  */
 function listMajors(auth) {
   const sheets = google.sheets({version: 'v4', auth});
-  sheets.spreadsheets.values.get({
-    spreadsheetId: '1FgV0D1ZMsiXqXv-e2wHBXW7LUGnUQGjJzHCJDha0Z2c',
-    range: '!A:C',
-  }, (err, res) => {
-    if (err) return console.log('The API returned an error: ' + err);
-    const rows = res.data.values;
-    if (rows.length) {
-      console.log('Position, Line1, Line2');
-      // Print columns A and B, which correspond to indices 0 and 1.
-      rows.map((row) => {
-        console.log(`${row[0]}  ${row[1]} ${row[2]}`);
-      });
-    } else {
-      console.log('No data found.');
-    }
-  });
+  
+  for(let i = 0; i < ranges.length; i ++) {
+    sheets.spreadsheets.values.get({
+      spreadsheetId: '1FgV0D1ZMsiXqXv-e2wHBXW7LUGnUQGjJzHCJDha0Z2c',
+      range: ranges[i],
+    }, (err, res) => {
+      if (err) return console.log('The API returned an error: ' + err);
+      const rows = res.data.values;
+      if (rows.length) {
+        rows.map((row) => {
+          console.log(row[0], row[2], row[4], row[6], row[8])
+        });
+      } else {
+        console.log('No data found.');
+      }
+    });
+  }
 }
