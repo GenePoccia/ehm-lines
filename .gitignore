@@ -1,1 +1,4 @@
 /node_modules/
+/credentials.json
+/sheets/quickstart/token.json
+/sheets/quickstart/credentials.json
