@@ -1,6 +1,7 @@
 const fs = require('fs');
 const readline = require('readline');
 const {google} = require('googleapis');
+const saveLines = require('../../src/src')
 
 // If modifying these scopes, delete token.json.
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
@@ -94,6 +95,8 @@ function listMajors(auth) {
         let startingGoalie = rows[12]
         let backupGoalie = rows[13]
 
+        //odd = names (column 1,3,5,7,9)
+        //even = ID (column 2,4,6,8,10)
         let lines = {
           lineOne : {
             LW: LINE_1[1],
@@ -153,16 +156,12 @@ function listMajors(auth) {
           }
         }
 
-        console.log(lines)
+        //get team (Takes the first 3 letters from ranges.json (ANA!A:K) to correspond to the tab)
+        let teamName = ranges[i][0] + ranges[i][1] + ranges[i][2]
 
+        //store lines
+        saveLines.print(lines, teamName)
 
-        // rows.map((row) => {
-        //   //line 1
-        //   //logs player name, LW, C, RW, LD, RD
-        //   console.log(row[1], row[3], row[5], row[7], row[9])
-        //   //logs ID,  LW, C, RW, LD, RD
-        //   console.log(row[2], row[4], row[6], row[8], row[10])
-        // });
       } else {
         console.log('No data found.');
       }
