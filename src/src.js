@@ -6,7 +6,6 @@ const print = (lines, teamName) => {
     if(!fs.existsSync(teamPath)) {
         fs.writeFileSync(__dirname + `/../teams/${teamName}` + '_lines.json', JSON.stringify(lines, null, 4))
     }
-    
 }
 
 const dirCheck = (path) => {
