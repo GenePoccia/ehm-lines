@@ -2,6 +2,7 @@ const fs = require('fs');
 const readline = require('readline');
 const {google} = require('googleapis');
 const saveLines = require('../../src/src')
+const ranges = require('./ranges.json')
 
 // If modifying these scopes, delete token.json.
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
@@ -67,7 +68,7 @@ function getNewToken(oAuth2Client, callback) {
   });
 }
 
-const ranges = require('./ranges.json')
+
 /**
  * Prints the names and majors of students in a sample spreadsheet:
  * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
