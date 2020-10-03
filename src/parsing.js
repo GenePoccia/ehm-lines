@@ -1,4 +1,5 @@
 const format = require('./formatting')
+const parse = require('./src')
 const parseLines = (params) => {
     for(let i = 0; i < params.range.length; i ++) {
         params.sheets.spreadsheets.values.get({
@@ -22,17 +23,15 @@ const parseLines = (params) => {
             }
 
             let formattedLines = format.lines(unformattedLines)
-            console.log(formattedLines)
-    
-            //odd = names (column 1,3,5,7,9)
-            //even = ID (column 2,4,6,8,10)
-            
-    
+           // console.log(formattedLines)
+
             //get team (Takes the first 3 letters from ranges.json (ANA!A:K) to correspond to the tab)
-            // let teamName = ranges[i][0] + ranges[i][1] + ranges[i][2]
+            // let teamName = params.range[i][0] + params.range[i][1] + params.range[i][2]
+            let teamName = parse.parseTeamName(params.range[i])
+            console.log(teamName)
     
             //store lines
-            // saveLines.print(lines, teamName)
+            parse.print(formattedLines, teamName)
     
           } else {
             console.log('No data found.');
