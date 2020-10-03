@@ -8,9 +8,6 @@ const print = (lines, teamName) => {
     }
 }
 
-const dirCheck = (path) => {
-
-}
 
 const parseTeamName = (str) => {
 
