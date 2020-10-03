@@ -14,6 +14,5 @@ const parseTeamName = (str) => {
 }
 
 module.exports = {
-    print,
-    parseTeamName
+    print
 }

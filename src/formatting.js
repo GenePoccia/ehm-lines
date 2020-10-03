@@ -1,60 +1,76 @@
 const lines = (unformattedLines) => {
     let lines = {
         lineOne : {
-          LW: unformattedLines.LINE_1[1],
-          C: unformattedLines.LINE_1[3],
-          RW: unformattedLines.LINE_1[5],
-          LD: unformattedLines.LINE_1[7],
-          RD: unformattedLines.LINE_1[9]
+          LW: unformattedLines.LINE_1[2],
+          C: unformattedLines.LINE_1[4],
+          RW: unformattedLines.LINE_1[6],
+          LD: unformattedLines.LINE_1[8],
+          RD: unformattedLines.LINE_1[10],
+          TACTIC: unformattedLines.LINE_1[11],
+          SHIFT: unformattedLines.LINE_1[12],
         },
         lineTwo : {
-          LW: unformattedLines.LINE_2[1],
-          C:  unformattedLines.LINE_2[3],
-          RW:  unformattedLines.LINE_2[5],
-          LD:  unformattedLines.LINE_2[7],
-          RD:  unformattedLines.LINE_2[9]
+          LW: unformattedLines.LINE_2[2],
+          C:  unformattedLines.LINE_2[4],
+          RW:  unformattedLines.LINE_2[6],
+          LD:  unformattedLines.LINE_2[8],
+          RD:  unformattedLines.LINE_2[10],
+          TACTIC: unformattedLines.LINE_2[11],
+          SHIFT: unformattedLines.LINE_2[12]
         },
         lineThree : {
-          LW: unformattedLines.LINE_3[1],
-          C:  unformattedLines.LINE_3[3],
-          RW:  unformattedLines.LINE_3[5],
-          LD:  unformattedLines.LINE_3[7],
-          RD:  unformattedLines.LINE_3[9]
+          LW: unformattedLines.LINE_3[2],
+          C:  unformattedLines.LINE_3[4],
+          RW:  unformattedLines.LINE_3[6],
+          LD:  unformattedLines.LINE_3[8],
+          RD:  unformattedLines.LINE_3[10],
+          TACTIC: unformattedLines.LINE_3[11],
+          SHIFT: unformattedLines.LINE_3[12]
         },
         lineFour : {
-          LW: unformattedLines.LINE_4[1],
-          C:  unformattedLines.LINE_4[3],
-          RW:  unformattedLines.LINE_4[5],
+          LW: unformattedLines.LINE_4[2],
+          C:  unformattedLines.LINE_4[4],
+          RW:  unformattedLines.LINE_4[6],
+          TACTIC: unformattedLines.LINE_4[11],
+          SHIFT: unformattedLines.LINE_4[12]
         },
         PP1 : {
-          LW: unformattedLines.PP_1[1],
-          C:  unformattedLines.PP_1[3],
-          RW:  unformattedLines.PP_1[5],
-          LD:  unformattedLines.PP_1[7],
-          RD:  unformattedLines.PP_1[9]
+          LW: unformattedLines.PP_1[2],
+          C:  unformattedLines.PP_1[4],
+          RW:  unformattedLines.PP_1[6],
+          LD:  unformattedLines.PP_1[8],
+          RD:  unformattedLines.PP_1[10],
+          TACTIC: unformattedLines.PP_1[11],
+          SHIFT: unformattedLines.PP_1[12]
         },
         PP2 : {
-          LW: unformattedLines.PP_2[1],
-          C:  unformattedLines.PP_2[3],
-          RW:  unformattedLines.PP_2[5],
-          LD:  unformattedLines.PP_2[7],
-          RD:  unformattedLines.PP_2[9]
+          LW: unformattedLines.PP_2[2],
+          C:  unformattedLines.PP_2[4],
+          RW:  unformattedLines.PP_2[6],
+          LD:  unformattedLines.PP_2[8],
+          RD:  unformattedLines.PP_2[10],
+          TACTIC: unformattedLines.PP_2[11],
+          SHIFT: unformattedLines.PP_2[12]
         },
         PK1 : {
-          LW: unformattedLines.PK_1[1],
-          C:  unformattedLines.PK_1[3],
-          LD:  unformattedLines.PK_1[5],
-          RD:  unformattedLines.PK_1[7]
+          LW: unformattedLines.PK_1[2],
+          C:  unformattedLines.PK_1[4],
+          LD:  unformattedLines.PK_1[6],
+          RD:  unformattedLines.PK_1[8],
+          TACTIC: unformattedLines.PK_1[11],
+          SHIFT: unformattedLines.PK_1[12]
         },
         PK2 : {
-          LW: unformattedLines.PK_2[1],
-          C:  unformattedLines.PK_2[3],
-          LD:  unformattedLines.PK_2[5],
-          RD:  unformattedLines.PK_2[7]
+          LW: unformattedLines.PK_2[2],
+          C:  unformattedLines.PK_2[4],
+          LD:  unformattedLines.PK_2[6],
+          RD:  unformattedLines.PK_2[8],
+          TACTIC: unformattedLines.PK_2[11],
+          SHIFT: unformattedLines.PK_2[12]
         },
         goalies: {
-          starter : unformattedLines.startingGoalie[1],
-          backup: unformattedLines.backupGoalie[1]
+          starter : unformattedLines.startingGoalie[2],
+          backup: unformattedLines.backupGoalie[2]
         }
       }
       return lines;
