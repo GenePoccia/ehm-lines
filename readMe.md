@@ -7,3 +7,4 @@ Output formatted to lns format
 
 Future:
 Add validity checks
+Add instructions
