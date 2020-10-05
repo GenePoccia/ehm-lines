@@ -1,5 +1,6 @@
 const format = require("./formatting");
 const parse = require("./src");
+const parser = require("./lnsParser")
 const parseLines = (params) => {
   for (let i = 0; i < params.range.length; i++) {
     params.sheets.spreadsheets.values.get(
@@ -24,13 +25,13 @@ const parseLines = (params) => {
             backupGoalie: rows[13],
           };
 
-          let formattedLines = format.lines(unformattedLines);
-
+          let linesJSON = format.lines(unformattedLines);
+          let linesLNS = parser.lns(linesJSON);
           //get team (Takes the first 3 letters from ranges.json (ANA!A:K) to correspond to the tab)
           let teamName = parse.parseTeamName(params.range[i]);
 
           //store lines
-          parse.print(formattedLines, teamName);
+          parse.print(linesLNS, teamName);
         } else {
           console.log("No data found.");
         }
