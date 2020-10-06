@@ -20,6 +20,7 @@ fs.readFile('credentials.json', (err, content) => {
   authorize(JSON.parse(content), listMajors);
 });
 
+
 /**
  * Create an OAuth2 client with the given credentials, and then execute the
  * given callback function.
@@ -85,6 +86,4 @@ function listMajors(auth) {
     sheetId: spreadsheet.id
   }
   parser.parseLines(params)
-
-
 }
