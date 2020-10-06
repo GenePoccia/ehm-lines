@@ -1,4 +1,4 @@
-const lns = (json) => {
+const jsonToLns = (json) => {
  let str =
  ` `+ json.goalies.starter+ ` ` + '\n'+
  ` ` +json.goalies.backup+ ` \n`+
@@ -47,5 +47,5 @@ const lns = (json) => {
 }
 
 module.exports = {
-    lns
+    jsonToLns
 }
