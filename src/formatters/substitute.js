@@ -1,3 +1,9 @@
+const teamName = (arg) => {
+  let teamName = arg.split("");
+  return teamName[0] + teamName[1] + teamName[2];
+};
+
+
 const tactics = (tactic) => {
   if (
     tactic === "run and gun" ||
@@ -44,6 +50,7 @@ const time = (time) => {
 };
 
 module.exports = {
+  teamName,
   tactics,
   time,
 };

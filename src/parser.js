@@ -1,7 +1,7 @@
 const format = require("./formatters/linesFormatter");
 const lnsFormat = require("./formatters/lnsFormatter")
 const output = require("./outputs/NhlOutput");
-const nhlTeamName = require ('./formatters/teamNames')
+const substitute = require ('./formatters/substitute')
 
 
 const parseLines = (params) => {
@@ -19,10 +19,11 @@ const parseLines = (params) => {
           let linesJSON = format.linesToJson(unformattedLines);
           let linesLNS = lnsFormat.jsonToLns(linesJSON);
           //get team (Takes the first 3 letters from ranges.json (ANA!A:M) to correspond to the tab)
-          let teamName = nhlTeamName.get(params.range[i]);
+          let NhlTeamName = substitute.teamName(params.range[i]);
 
           //store NHL Lines
-          output.print(linesLNS, teamName);
+          output.print(linesLNS, NhlTeamName);
+
         } else {
           console.log("No data found.");
         }
