@@ -1,7 +1,8 @@
 const fs = require('fs');
 const readline = require('readline');
 const {google} = require('googleapis');
-const saveLines = require('../../src/src')
+
+const parser = require('../../src/parser.js');
 const ranges = require('./ranges.json')
 const spreadsheet = require('./spreadsheetId.json')
 
@@ -69,8 +70,8 @@ function getNewToken(oAuth2Client, callback) {
   });
 }
 
-const parse = require('../../src/parsing.js');
-const { parseLines } = require('../../src/parsing.js');
+
+
 /**
  * Prints the names and majors of students in a sample spreadsheet:
  * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
@@ -83,7 +84,7 @@ function listMajors(auth) {
     range: ranges,
     sheetId: spreadsheet.id
   }
-  parse.parseLines(params)
+  parser.parseLines(params)
 
 
 }

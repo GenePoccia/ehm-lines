@@ -1,22 +1,4 @@
-const fs = require("fs");
-const path = require("path");
-
-const print = (lines, teamName) => {
-  let teamPath = __dirname + `/../teams/${teamName}`;
-  if (!fs.existsSync(teamPath)) {
-    fs.writeFileSync(
-      __dirname + `/../teams/${teamName}` + "_lines.lns",
-      lines
-    );
-  }
-};
-
-const parseTeamName = (arg) => {
-  let teamName = arg.split("");
-  return teamName[0] + teamName[1] + teamName[2];
-};
-
-const parseTactics = (tactic) => {
+const tactics = (tactic) => {
   if (
     tactic === "run and gun" ||
     tactic === "shooting" ||
@@ -49,7 +31,7 @@ const parseTactics = (tactic) => {
     return "4";
 };
 
-const parseTime = (time) => {
+const time = (time) => {
   if (time === "10") return "1";
   if (time === "20") return "2";
   if (time === "30") return "3";
@@ -62,8 +44,6 @@ const parseTime = (time) => {
 };
 
 module.exports = {
-  print,
-  parseTeamName,
-  parseTactics,
-  parseTime,
+  tactics,
+  time,
 };
