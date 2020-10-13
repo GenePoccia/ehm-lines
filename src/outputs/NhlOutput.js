@@ -36,7 +36,7 @@ const printTests = (lines, teamName) => {
   if (!fs.existsSync(teamPath)) {
     fs.writeFileSync(
       __dirname + `/../../tests/NhlTeamsTests/${teamName}` + "_lines.json",
-      lines
+      JSON.stringify(lines, null, 1)
     );
   }
 }
