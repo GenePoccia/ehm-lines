@@ -2,9 +2,9 @@
 
 Script to parse lines from a google sheet locally and output them in a .lns file supported by ehm
 
-Missing:
-Output formatted to lns format
+To do: </br>
+Refactor functions and files for a more organized structure
 
-Future:
-Add validity checks
+Future:</br>
+Add validity checks</br>
 Add instructions
