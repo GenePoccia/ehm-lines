@@ -20,7 +20,29 @@ const print = (lines, teamName) => {
   }
 };
 
+const printTests = (lines, teamName) => {
+  let nhlTeamTestDir = __dirname + `/../../tests/NhlTeamsTests/`
+  let ahlTeamTestDir = __dirname + `/../../tests/AhlTeamsTests/`
+
+  if(!fs.existsSync(nhlTeamTestDir)) {
+    fs.mkdirSync(nhlTeamTestDir)
+  }
+  if(!fs.existsSync(ahlTeamTestDir)) {
+    fs.mkdirSync(ahlTeamTestDir)
+  }
+
+  let teamPath = __dirname + `/../../tests/NhlTeamsTests/${teamName}`;
+
+  if (!fs.existsSync(teamPath)) {
+    fs.writeFileSync(
+      __dirname + `/../../tests/NhlTeamsTests/${teamName}` + "_lines.json",
+      lines
+    );
+  }
+}
+
 
 module.exports = {
-    print
+    print,
+    printTests
   };

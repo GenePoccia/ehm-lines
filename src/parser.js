@@ -23,6 +23,8 @@ const parseLines = (params) => {
 
           //store NHL Lines
           output.print(linesLNS, NhlTeamName);
+          //store NHL lines in json for tests
+          output.printTests(linesJSON, NhlTeamName)
 
         } else {
           console.log("No data found.");
