@@ -11,7 +11,7 @@ const print = (lines, teamName) => {
   }
 };
 
-const parseTeamName = (arg) => {
+const teamName = (arg) => {
   let teamName = arg.split("");
   return teamName[0] + teamName[1] + teamName[2];
 };
@@ -64,7 +64,7 @@ const time = (time) => {
 
 module.exports = {
   print,
-  parseTeamName,
+  teamName,
   tactics,
   time,
 };
