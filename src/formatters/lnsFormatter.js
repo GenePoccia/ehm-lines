@@ -40,8 +40,8 @@ const jsonToLns = (json) => {
  ` `+ json.PK2.LW+ ` \n`+
  ` `+ json.PK2.C+ ` \n`+
  ` `+json.goalies.starter+ ` \n`+
- ` `+json.lineOne.TACTIC+ ` `+ json.lineTwo.TACTIC+ ` `+ json.lineThree.TACTIC+ ` `+ json.lineFour.TACTIC+ ` `+ json.PP1.TACTIC+ ` `+ json.PP2.TACTIC+ ` `+ json.PK1.TACTIC+ ` `+ json.PK2.TACTIC+ ` \n`+
- ` `+json.lineOne.SHIFT + ` ` + json.lineTwo.SHIFT + ` ` + json.lineThree.SHIFT + ` ` + json.lineFour.SHIFT + ` ` + json.PP1.SHIFT + ` ` + json.PP2.SHIFT + ` ` + json.PK1.SHIFT + ` ` + json.PK2.SHIFT+ ` `
+ ` `+json.lineOne.TACTIC+ `  `+ json.lineTwo.TACTIC+ `  `+ json.lineThree.TACTIC+ `  `+ json.lineFour.TACTIC+ `  `+ json.PP1.TACTIC+ `  `+ json.PP2.TACTIC+ `  `+ json.PK1.TACTIC+ `  `+ json.PK2.TACTIC+ ` \n`+
+ ` `+json.lineOne.SHIFT + `  ` + json.lineTwo.SHIFT + `  ` + json.lineThree.SHIFT + `  ` + json.lineFour.SHIFT + `  ` + json.PP1.SHIFT + `  ` + json.PP2.SHIFT + `  ` + json.PK1.SHIFT + `  ` + json.PK2.SHIFT+ ` `
 
  return str
 }
